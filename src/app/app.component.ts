@@ -1,27 +1,41 @@
 
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { IonApp, IonSplitPane, IonMenu, IonContent, IonList, IonListHeader, IonNote, IonMenuToggle, IonItem, IonIcon, IonLabel, IonRouterOutlet, IonRouterLink } from '@ionic/angular/standalone';
+import { IonMenuToggle, IonToolbar, IonHeader,IonTitle, IonApp, IonSplitPane, IonMenu, IonContent, IonList, IonItem, IonIcon, IonLabel, IonRouterOutlet, IonRouterLink } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
-import { mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, heartOutline, heartSharp, archiveOutline, archiveSharp, trashOutline, trashSharp, warningOutline, warningSharp, bookmarkOutline, bookmarkSharp } from 'ionicons/icons';
+import { playForwardSharp, playForwardOutline, bookmarkOutline, bookmarkSharp } from 'ionicons/icons';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  styleUrls: ['app.component.scss'],
-  imports: [RouterLink, RouterLinkActive, IonApp, IonSplitPane, IonMenu, IonContent, IonList, IonListHeader, IonNote, IonMenuToggle, IonItem, IonIcon, IonLabel, IonRouterLink, IonRouterOutlet],
+  styleUrls: ['app.component.scss'], 
+  imports: [ CommonModule, IonMenuToggle, IonToolbar,IonHeader,IonTitle,RouterLink, RouterLinkActive, IonApp, IonSplitPane, IonMenu, IonContent, IonList, IonItem, IonIcon, IonLabel, IonRouterLink, IonRouterOutlet],
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Inbox', url: '/folder/inbox', icon: 'mail' },
-    { title: 'Outbox', url: '/folder/outbox', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/folder/favorites', icon: 'heart' },
-    { title: 'Archived', url: '/folder/archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/spam', icon: 'warning' },
+    {
+      title: 'ÜRETİM',
+      url: '',
+      icon: 'play-forward',
+      children: [
+        { title: 'Ürün', url: '/product/10', icon: 'play-forward' },
+        { title: 'Ürünler', url: '/products', icon: 'play-forward' },
+      ],
+    },
+    {
+      title: 'DEPO',
+      url: '',
+      icon: 'play-forward',
+      children: [
+        { title: 'Depo Giriş', url: '/depo-giris', icon: 'play-forward' },
+        { title: 'Depo Çıkış', url: '/depo-cikis', icon: 'play-forward' },
+        { title: 'Depo Stok', url: '/depo-stok', icon: 'play-forward' },
+      ],
+    },
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+  public labels = ['CHEKICH Recent Fashion'];
   constructor() {
-    addIcons({ mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, heartOutline, heartSharp, archiveOutline, archiveSharp, trashOutline, trashSharp, warningOutline, warningSharp, bookmarkOutline, bookmarkSharp });
+    addIcons({ playForwardSharp, playForwardOutline, bookmarkOutline, bookmarkSharp });
   }
 }

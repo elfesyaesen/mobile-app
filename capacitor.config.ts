@@ -1,9 +1,9 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'mobile-app',
-  webDir: 'www'
+  appId: 'org.chekich.app',
+  appName: 'URETIM',
+  webDir: 'www/browser'
 };
 
 export default config;

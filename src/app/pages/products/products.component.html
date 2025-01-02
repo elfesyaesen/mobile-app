@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ürünler</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let product of products" (click)="navigateToProduct(product.id)">
+      <ion-thumbnail slot="start">
+        <img [src]="product.image" alt="Product Image" />
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ product.name }}</h2>
+        <p>{{ product.description }}</p>
+        <strong>₺{{ product.price }}</strong>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-router-outlet id="main-content"></ion-router-outlet>

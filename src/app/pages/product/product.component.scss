@@ -1,0 +1,30 @@
+ion-card {
+    margin: 20px;
+  }
+  
+  ion-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  ion-card-header {
+    background-color: #f4f4f4;
+  }
+  
+  ion-card-title {
+    font-size: 1.5em;
+  }
+  
+  ion-card-subtitle {
+    color: #ff5722;
+    font-weight: bold;
+  }
+  
+  ion-item {
+    cursor: pointer;
+  }
+  
+  ion-thumbnail img {
+    border-radius: 8px;
+  }
+  
