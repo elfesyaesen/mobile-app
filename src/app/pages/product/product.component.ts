@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { IonCard, IonCardTitle, IonCardContent, IonCardHeader, IonContent, IonHeader, IonToolbar, IonTitle, IonCardSubtitle } from '@ionic/angular/standalone';
+import { IonCard, IonCardTitle, IonCardContent, IonCardHeader, IonContent, IonHeader, IonToolbar, IonTitle, IonCardSubtitle,IonButtons, IonMenuButton } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss'],
-  imports: [ CommonModule, IonCard, IonCardTitle, IonCardContent, IonCardHeader, IonContent, IonHeader, IonToolbar, IonTitle, IonCardSubtitle ],
+  imports: [ CommonModule, IonCard, IonCardTitle, IonCardContent, IonCardHeader, IonContent, IonHeader, IonToolbar, IonTitle, IonCardSubtitle, IonButtons, IonMenuButton],
 })
 export class ProductComponent implements OnInit {
+  public title: string = 'Ürün';
   public productId: string | null = null;
   public productDetails: any = null; // Seçili ürün için
   private products = [

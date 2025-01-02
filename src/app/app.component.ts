@@ -16,7 +16,6 @@ export class AppComponent {
   public appPages = [
     {
       title: 'ÜRETİM',
-      url: '',
       icon: 'play-forward',
       children: [
         { title: 'Ürün', url: '/product/10', icon: 'play-forward' },
@@ -25,7 +24,6 @@ export class AppComponent {
     },
     {
       title: 'DEPO',
-      url: '',
       icon: 'play-forward',
       children: [
         { title: 'Depo Giriş', url: '/depo-giris', icon: 'play-forward' },

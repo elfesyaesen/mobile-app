@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
   imports: [IonicModule, CommonModule],
 })
 export class ProductsComponent implements OnInit {
+  public title: string = 'Ürünler';
   public products: any = [
     {
       id: '1',
