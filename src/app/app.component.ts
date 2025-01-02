@@ -15,20 +15,19 @@ import { CommonModule } from '@angular/common';
 export class AppComponent {
   public appPages = [
     {
-      title: 'ÜRETİM',
+      title: 'DEPO',
       icon: 'play-forward',
       children: [
-        { title: 'Ürün', url: '/product/10', icon: 'play-forward' },
         { title: 'Ürünler', url: '/products', icon: 'play-forward' },
       ],
     },
     {
-      title: 'DEPO',
+      title: 'ÜRETİM',
       icon: 'play-forward',
       children: [
-        { title: 'Depo Giriş', url: '/depo-giris', icon: 'play-forward' },
-        { title: 'Depo Çıkış', url: '/depo-cikis', icon: 'play-forward' },
-        { title: 'Depo Stok', url: '/depo-stok', icon: 'play-forward' },
+        { title: 'Üretim Giriş', url: '/production-entry', icon: 'play-forward' },
+        { title: 'Üretim Çıkış', url: '/production-export', icon: 'play-forward' },
+        { title: 'Üretim Stok', url: '/production-inventory', icon: 'play-forward' },
       ],
     },
   ];

@@ -7,10 +7,6 @@ export const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: 'home',
-    loadComponent: () => import('./pages/home/home.component').then((m) => m.HomeComponent),
-  },
-  {
     path: 'products',
     loadComponent: () => import('./pages/products/products.component').then((m) => m.ProductsComponent),
   },
@@ -19,8 +15,20 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/product/product.component').then((m) => m.ProductComponent),
   },
   {
+    path: 'production-entry',
+    loadComponent: () => import('./pages/product/product.component').then((m) => m.ProductComponent),
+  },
+  {
+    path: 'production-export',
+    loadComponent: () => import('./pages/product/product.component').then((m) => m.ProductComponent),
+  },
+  {
+    path: 'production-inventory',
+    loadComponent: () => import('./pages/product/product.component').then((m) => m.ProductComponent),
+  },
+  {
     path: '**',
-    redirectTo: 'home',
+    redirectTo: 'product/1',
     pathMatch: 'full',
   },
 ];

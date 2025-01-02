@@ -33,50 +33,7 @@ export class ProductsComponent implements OnInit {
       description: 'Bu Ürün 3 açıklamasıdır.',
       price: 300,
       image: 'https://via.placeholder.com/150',
-    },
-    {
-      id: '4',
-      name: 'Ürün 3',
-      description: 'Bu Ürün 3 açıklamasıdır.',
-      price: 300,
-      image: 'https://via.placeholder.com/150',
-    },{
-      id: '5',
-      name: 'Ürün 3',
-      description: 'Bu Ürün 3 açıklamasıdır.',
-      price: 300,
-      image: 'https://via.placeholder.com/150',
-    },{
-      id: '6',
-      name: 'Ürün 3',
-      description: 'Bu Ürün 3 açıklamasıdır.',
-      price: 300,
-      image: 'https://via.placeholder.com/150',
-    },{
-      id: '7',
-      name: 'Ürün 3',
-      description: 'Bu Ürün 3 açıklamasıdır.',
-      price: 300,
-      image: 'https://via.placeholder.com/150',
-    },{
-      id: '8',
-      name: 'Ürün 3',
-      description: 'Bu Ürün 3 açıklamasıdır.',
-      price: 300,
-      image: 'https://via.placeholder.com/150',
-    },{
-      id: '3',
-      name: 'Ürün 3',
-      description: 'Bu Ürün 3 açıklamasıdır.',
-      price: 300,
-      image: 'https://via.placeholder.com/150',
-    },{
-      id: '10',
-      name: 'Ürün 3',
-      description: 'Bu Ürün 3 açıklamasıdır.',
-      price: 300,
-      image: 'https://via.placeholder.com/150',
-    },
+    }
   ];
 
   constructor(private router: Router) {}
@@ -84,6 +41,6 @@ export class ProductsComponent implements OnInit {
   ngOnInit() {}
 
   navigateToProduct(productId: string) {
-    this.router.navigate(['/product', productId]);
+    this.router.navigate(['/product/' + productId]);
   }
 }
